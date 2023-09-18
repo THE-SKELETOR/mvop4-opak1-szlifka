@@ -2,16 +2,31 @@
 
 export default async function Post( {params} ) {
     const post = await getData( params.id )
-    return (
-        <div className='flex min-h-screen flex-col items-center p-5'>
-            <div className="my-12">
-                {post.title}
+    if (post.userId != 10)
+    {
+        return (
+            <div className='flex min-h-screen flex-col items-center p-5'>
+                <div className="my-12">
+                    {post.id}
+                </div>
+                <div>
+                    {post.title}
+                </div>
+                <div>
+                    {post.body}
+                </div>
             </div>
-            <div>
-                {post.body}
+        )
+    }
+    else {
+        return (
+            <div className='flex min-h-screen flex-col items-center p-5'>
+                <div className="my-12">
+                    This is private!
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export async function getData( id ) {

@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import Suspense from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
         </nav>
-        {children}
+          {children}
         </body>
     </html>
   )
