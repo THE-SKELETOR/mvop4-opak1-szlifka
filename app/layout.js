@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className='absolute bg-white dark:bg-gray-700 border-red-700 min-w-full'>
+        <nav className='fixed bg-white dark:bg-gray-700 border-red-700 min-w-full'>
           <div className='max-w-screen-xl flex flex-warp items-center justify-between mx-auto p-4 dark:text-white'>
             <div>
               there is no point to this text
